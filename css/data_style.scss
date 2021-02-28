@@ -1,0 +1,259 @@
+$text-color: #FFF;
+$logo-color: #188C81;
+$main-color: #0E1626;
+
+$button-color: #F26363;
+
+body {
+    background-image:url(../images/Background.png);
+    background-size:1500px;
+    background-attachment: fixed;
+    margin: auto;
+    padding: 50px;
+    color: $text-color;
+    background-color: #111111;
+    font-family: 'Lato', 'sans-serif';
+}
+
+
+/* hide message if browser supports grid */
+@supports(display:grid) {
+    .message {
+        display: none;
+    }
+}
+
+/* message styling if grid not supported */
+.message {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+
+/* Set up grid */
+.wrapper {
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "logo logo"
+        "banner banner"
+        "side main"
+        "foot foot";
+}
+
+    
+.box {
+    background-color: #444;
+    /* dark grey */
+    padding: 20px;
+}
+
+
+/* make logo and banner the same colour */
+.logo {
+    background-color: $logo-color;
+    text-align: center;
+    grid-area: logo;
+    
+    padding-top: 30px;
+    padding-bottom: 5px;
+    
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    
+    a:hover{
+        text-decoration: none;
+        color: $logo-color * 2;
+        
+    }
+}
+
+h5{
+    margin: 10px;
+}
+
+.banner {
+    background-color: #05A696;
+    text-align: center;
+    grid-area: banner;
+    vertical-align: middle;
+    font-family: 'WeezerFont', sans-serif;
+    font-size: 150%;
+    max-height: 150px;
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    
+    a:hover{
+        text-decoration: none;
+        color: $logo-color * 2;
+    }
+}
+
+.side {
+    grid-area: side;
+    font-size: 14px;
+    
+    
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+.paddedside {
+    padding: 125px;
+    padding-top: 155px; 
+}
+
+.main {
+    grid-area: main;
+    color: $text-color;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+}
+
+#fadein{
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+} // Code for keyframes of fade in transition
+
+.main, .side {
+    background-color: $main-color;
+}
+
+.keyart {
+    text-align: right;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+    
+.footer {
+    font-family: 'WeezerFont', sans-serif;
+    grid-area: foot;
+    text-align: right;
+    color: #fff;
+    background-color: #111111;
+}
+
+
+/*** Headings ***/
+
+h1 {
+    font-family: 'WeezerFont', sans-serif;
+}    
+
+.sub_heading {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: $text-color;
+    font-weight: bold;
+}
+
+.submit {
+    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    position: relative;
+    width: 45px;
+    left: -1px;
+    background-color: $button-color;
+    color: #FFF;
+    border: 1px solid #636263;
+    border-radius: 0 5px 5px 0;
+}
+
+.advanced-button {
+    margin: auto;
+    width: 230px;
+    border-radius: 5px;
+    background-color: $button-color;
+    font-size: 105%;
+}
+
+.submit:hover{
+        background-color: $button-color * 1.5;
+    
+        -webkit-animation: buttonfade 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: buttonfade 1s; /* Firefox < 16 */
+        -ms-animation: buttonfade 1s; /* Internet Explorer */
+         -o-animation: buttonfade 1s; /* Opera < 12.1 */
+            animation: buttonfade 1s;
+        
+}
+
+#buttonfade {
+
+    @keyframes buttonfade {
+        from {background-color: $button-color;}
+        to {background-color: $button-color * 1.5;}
+    }
+
+    /* Firefox < 16 */
+    @-moz-keyframes buttonfade {
+        from {background-color: $button-color;}
+        to {background-color: $button-color * 1.5;}
+    }
+
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes buttonfade {
+        from {background-color: $button-color;}
+        to {background-color: $button-color * 1.5;}
+    }
+
+    /* Internet Explorer */
+    @-ms-keyframes buttonfade {
+        from {background-color: $button-color;}
+        to {background-color: $button-color * 1.5;}
+    }
+
+    /* Opera < 12.1 */
+    @-o-keyframes buttonfade {
+        from {background-color: $button-color;}
+        to {background-color: $button-color * 1.5;}
+    }
+}
