@@ -25,7 +25,7 @@
                 <div>
                     <span class="sub_heading">
                         <h2><?php echo $find_rs['Name']; ?></h2>
-                        <h6><?php echo $find_rs['Faction']; ?></h6>
+                        <h6>Faction: <?php echo $find_rs['Faction']; ?></h6>
                     </span>
                 </div> <!-- Title -->
                 
