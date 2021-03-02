@@ -1,5 +1,7 @@
-FactionID,Faction
-1,Underland Constructors
-2,Underland Resistance
-3,Skywalkers
-4,Darkspore
+TypeID,Type
+1,Character
+2,Weapon
+3,Enemy
+4,Item
+5,Misc
+6,Area
