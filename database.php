@@ -1,4 +1,9 @@
-<?php include("topbit.php") ?>
+<?php include("head.php") ?>
+
+
+<div class="wrapper">
+    
+    <?php include("top.php") ?>
 
         <div class="box main">
             <div class="keyart">
@@ -23,4 +28,8 @@
             </form>
         </div> <!-- / side bar -->
         
-<?php include("bottombit.php") ?>
+        <?php include("bottombit.php") ?>
+
+</div> <!-- / wrapper -->
+
+</body>

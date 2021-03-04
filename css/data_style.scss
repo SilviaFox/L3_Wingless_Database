@@ -33,8 +33,9 @@ body {
 
 /* Set up grid */
 .wrapper {
-    
-    display: grid;
+
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas:
