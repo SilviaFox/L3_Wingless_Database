@@ -6,7 +6,7 @@
     
         <?php 
             if(!isset($_REQUEST['page'])) {
-                include("main.php");
+                include("content/main.php");
             } // End of if statement that include home page
             else {
                 $page = preg_replace('/[^0-9a-zA-Z]-/','',$_REQUEST['page']);

@@ -4,10 +4,10 @@
             </div> <!-- / logo -->
             
             <div class="box banner">
-                <h5><a href="index.php">Home</a> | <a href="database.php">Advanced Search</a> | <a href="contact.php" >About</a></h5>
+                <h5><a href="index.php">Home</a> | <a href="index.php?page=database">Advanced Search</a> | <a href="index.php?page=contact" >About</a></h5>
                 
                 <h6>
-                    <form class="searchform" method="post" action="search_name.php" enctype="multipart/form-data">
+                    <form class="searchform" method="post" action="index.php?page=search_name" enctype="multipart/form-data">
 
                         <input class="search" type="text" name="item_name" size="30" value="" placeholder="Search the database..."/>
 
