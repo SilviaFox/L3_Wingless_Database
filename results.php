@@ -35,6 +35,7 @@
                 <div class="description">
                 <?php echo $find_rs['Description']; ?>
                 </div>
+                <hr>
             </div> <!-- /results -->
 
 

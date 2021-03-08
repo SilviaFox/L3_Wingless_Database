@@ -20,8 +20,7 @@ body {
 
 /* Set up grid */
 .wrapper {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "logo logo" "banner banner" "side main" "foot foot"; }

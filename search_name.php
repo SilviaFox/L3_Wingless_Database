@@ -1,5 +1,3 @@
-
-
 <div class="wrapper">
     <?php include("head.php");
         include("top.php");
@@ -17,17 +15,17 @@
     ?>
 
 
-        <div class="box side">
-            <h2>Name Results</h2>
-        </div>
+    <div class="box side">
+        <h2>Name Results</h2>
+    </div>
 
-        <div class="box main">
-            
-            <?php 
+    <div class="box main">
+
+        <?php 
                 include ("results.php")
             ?>
-            
-        </div>
-        
-<?php include("bottombit.php"); ?>
+
+    </div>
+
+    <?php include("bottombit.php"); ?>
 </div>
