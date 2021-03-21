@@ -3,11 +3,11 @@
     <h2>Database</h2>
     <p>Search the database for information about the wasteland.</p>
     
-    <form class="searchform" method="post" action="index.php?page=search_name" enctype="multipart/form-data">
+    <form class="searchform" method="post" action="index.php?page=advanced" enctype="multipart/form-data">
     
         <input class="search" type="text" name="item_name" size="30" value="" placeholder="Item Name..."/>
         <br>
-        <input class="search" type="text" name="item_faction" size="30" value="" placeholder="Faction"/>
+        <input class="search" type="text" name="item_faction" size="30" value="" placeholder="Faction..."/>
         
         <p>
         <input class="submit advanced-button" type="submit" value="Submit" />

@@ -194,6 +194,17 @@ h1 {
     font-family: 'Ubuntu', sans-serif;
     color: $text-color;
     font-weight: bold;
+
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    
+    a:hover{
+        text-decoration: none;
+        color: $logo-color * 2;
+        
+    }
 }
 
 .submit {

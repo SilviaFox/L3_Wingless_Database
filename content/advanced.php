@@ -1,10 +1,13 @@
 <?php
 
+    // Get variables
     $item_name = $_POST['item_name'];
+    $item_faction = $_POST['item_faction'];
 
+    // Find items
     $find_sql = "SELECT * FROM `item_details`
     WHERE `Name` LIKE '%$item_name%'
-    
+    AND `Faction_ID` LIKE '%$item_faction%'
     ";
     $find_query = mysqli_query($dbconnect, $find_sql);
     $find_rs = mysqli_fetch_assoc($find_query);

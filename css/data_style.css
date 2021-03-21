@@ -157,6 +157,12 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
   color: #FFF;
   font-weight: bold; }
+  .sub_heading a {
+    text-decoration: none;
+    color: #FFF; }
+  .sub_heading a:hover {
+    text-decoration: none;
+    color: #30ffff; }
 
 .submit {
   font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
