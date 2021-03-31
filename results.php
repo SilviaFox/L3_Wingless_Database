@@ -16,29 +16,20 @@
             
             else {
                 do {
+                    // Get name, type and description
                     $name = preg_replace('/[^A-Za-z0-9.,\s\'\-]/', ' ', $find_rs['Name']);
+                    $type_rs = searchID($dbconnect, $find_rs, 'Type_ID', 'type');
                     $description = preg_replace('/[^A-Za-z0-9.,\s\'\-]/', ' ', $find_rs['Description']);
+                    
                 ?>
             <!-- Results go here -->
             <div class="results">
 
-                <!-- Heading and subtitle -->
+                <!-- Echo out info-->
 
-                <div>
-                    <!-- Get faction ID and find correstponding faction -->
-                    <?php $factionID = $find_rs['Faction_ID'];
-                        $faction_sql = "SELECT * FROM `faction` WHERE `Faction_ID` = $factionID";
-                        $faction_query = mysqli_query($dbconnect, $faction_sql);
-                        $faction_rs = mysqli_fetch_assoc($faction_query);
-                    ?>
-                    <span class="sub_heading">
-                        <h2><?php echo $name?></h2>
-                        <!-- Substitute out factionID for the corresponding faction -->
-                        <h6><a href="index.php?page=author&authorID=<?php echo $factionID; ?>"><?php echo $faction_rs['Faction']; ?></a></h6>
-                    </span>
-                </div> <!-- Title -->
+                <?php include("get_faction.php"); ?>
+                <?php echo $type_rs['Type']; ?>
                 
-
                 <hr>
                 
                 <div class="description">

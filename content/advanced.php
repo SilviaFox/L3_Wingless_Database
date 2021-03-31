@@ -17,7 +17,8 @@
 
 
 <div class="box side">
-    <h2>Name Results</h2>
+    <h2>Database</h2>
+    <h4>Found <?php echo($count) ?> results</h4>
 </div>
 
 <div class="box main">

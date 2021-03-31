@@ -78,7 +78,7 @@ h5 {
   animation: fadein 1s; }
 
 .paddedside {
-  padding: 125px;
+  padding-left: 100px;
   padding-top: 155px; }
 
 .main {
@@ -164,6 +164,11 @@ h1 {
     text-decoration: none;
     color: #30ffff; }
 
+.search {
+  width: 230px;
+  height: 30px;
+  border-radius: 5px; }
+
 .submit {
   font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
@@ -183,45 +188,17 @@ h1 {
 
 .submit:hover {
   background-color: #ff9595;
-  -webkit-animation: buttonfade 1s;
-  /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: buttonfade 1s;
-  /* Firefox < 16 */
-  -ms-animation: buttonfade 1s;
-  /* Internet Explorer */
-  -o-animation: buttonfade 1s;
-  /* Opera < 12.1 */
   animation: buttonfade 1s; }
 
-#buttonfade {
-  /* Firefox < 16 */
-  /* Safari, Chrome and Opera > 12.1 */
-  /* Internet Explorer */
-  /* Opera < 12.1 */ }
+.description {
+  text-align: center; }
+
 @keyframes buttonfade {
   from {
     background-color: #F26363; }
   to {
     background-color: #ff9595; } }
-@-moz-keyframes buttonfade {
-  from {
-    background-color: #F26363; }
-  to {
-    background-color: #ff9595; } }
-@-webkit-keyframes buttonfade {
-  from {
-    background-color: #F26363; }
-  to {
-    background-color: #ff9595; } }
-@-ms-keyframes buttonfade {
-  from {
-    background-color: #F26363; }
-  to {
-    background-color: #ff9595; } }
-@-o-keyframes buttonfade {
-  from {
-    background-color: #F26363; }
-  to {
-    background-color: #ff9595; } }
+.results {
+  text-align: center; }
 
 /*# sourceMappingURL=data_style.css.map */

@@ -112,7 +112,7 @@ h5{
 }
 
 .paddedside {
-    padding: 125px;
+    padding-left: 100px;
     padding-top: 155px; 
 }
 
@@ -207,6 +207,12 @@ h1 {
     }
 }
 
+.search {
+    width: 230px;
+    height: 30px;
+    border-radius: 5px;
+}
+
 .submit {
     font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     position: relative;
@@ -228,13 +234,12 @@ h1 {
 
 .submit:hover{
         background-color: $button-color * 1.5;
-    
-        -webkit-animation: buttonfade 1s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: buttonfade 1s; /* Firefox < 16 */
-        -ms-animation: buttonfade 1s; /* Internet Explorer */
-         -o-animation: buttonfade 1s; /* Opera < 12.1 */
-            animation: buttonfade 1s;
+        animation: buttonfade 1s;
         
+}
+
+.description {
+    text-align: center;
 }
 
 #buttonfade {
@@ -243,28 +248,8 @@ h1 {
         from {background-color: $button-color;}
         to {background-color: $button-color * 1.5;}
     }
+}
 
-    /* Firefox < 16 */
-    @-moz-keyframes buttonfade {
-        from {background-color: $button-color;}
-        to {background-color: $button-color * 1.5;}
-    }
-
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes buttonfade {
-        from {background-color: $button-color;}
-        to {background-color: $button-color * 1.5;}
-    }
-
-    /* Internet Explorer */
-    @-ms-keyframes buttonfade {
-        from {background-color: $button-color;}
-        to {background-color: $button-color * 1.5;}
-    }
-
-    /* Opera < 12.1 */
-    @-o-keyframes buttonfade {
-        from {background-color: $button-color;}
-        to {background-color: $button-color * 1.5;}
-    }
+.results {
+    text-align: center;
 }

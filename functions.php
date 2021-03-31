@@ -77,6 +77,15 @@ function get_rs($dbconnect, $sql)
     return $find_rs;
 }
 
+function searchID($dbconnect, $find_rs, $entity_ID, $table)
+{
+    $entityID = $find_rs[$entity_ID];
+    $entity_sql = "SELECT * FROM $table WHERE `$entity_ID` = $entityID";
+    $entity_query = mysqli_query($dbconnect, $entity_sql);
+    $entity_rs = mysqli_fetch_assoc($entity_query);
+
+    return $entity_rs;
+}
 
 function country_job($dbconnect, $entity_1, $entity_2, $label_sg, $label_pl, $table, $entity_ID, $entity_name)
 {
