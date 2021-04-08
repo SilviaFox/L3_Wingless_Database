@@ -37,6 +37,8 @@
         </p>
 
     </form>
+        <h3><a href="index.php?page=random">Random</a> | <a href="index.php?page=recent">Recent</a></h3>
+    
 </div> <!-- / side bar -->
 
 

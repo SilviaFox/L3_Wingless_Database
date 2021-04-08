@@ -23,7 +23,7 @@
                     
                 ?>
             <!-- Results go here -->
-            <div class="results">
+            <div class="centered">
 
                 <!-- Echo out info-->
 
@@ -32,7 +32,7 @@
                 
                 <hr>
                 
-                <div class="description">
+                <div class="centered">
                     <?php echo $description; ?>
                 </div>
                 <hr>

@@ -190,15 +190,12 @@ h1 {
   background-color: #ff9595;
   animation: buttonfade 1s; }
 
-.description {
-  text-align: center; }
-
 @keyframes buttonfade {
   from {
     background-color: #F26363; }
   to {
     background-color: #ff9595; } }
-.results {
+.centered {
   text-align: center; }
 
 /*# sourceMappingURL=data_style.css.map */
