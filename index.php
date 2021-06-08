@@ -2,7 +2,6 @@
 
     <div class="wrapper">
     
-        <?php include("top.php") ?>
     
         <?php 
             if(!isset($_REQUEST['page'])) { //Checks if page is null
@@ -12,9 +11,10 @@
                 $page = preg_replace('/[^0-9a-zA-Z]-/','',$_REQUEST['page']); 
                 include("content/$page.php"); // Include page
             } // End of else that includes requested content
-
-        ?>
+            
+            ?>
         
+        <?php include("top.php") ?>
         <?php include("bottombit.php") ?>
 
     </div> <!-- / wrapper -->
