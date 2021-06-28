@@ -43,23 +43,17 @@ else {
 
         <select name="faction">
             <option value="unknown" selected>New Faction</option>
-
-
             <?php
 
                 do {
                     $faction_name = $all_factions_rs['Faction'];
-                
-
             ?>
                 <option value="<?php echo $all_factions_rs['Faction_ID']; ?>">
                     <?php echo $faction_name; ?>
                 </option>
             <?php
                 }
-                
                 while($all_factions_rs = mysqli_fetch_assoc($all_factions_query))
-
             ?>
         </select>
 
