@@ -21,11 +21,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="art, drawing ">
-    <meta name="author" content="Samuel Kennedy">
-    <meta name="keywords" content="art, drawing">
+    <meta name="description" content="Level 3 website for Level 3 game">
+    <meta name="author" content="Samantha Kennedy">
+    <meta name="keywords" content="game, gaming, indie">
 
-    <title>Art Database</title>
+    <title>H0ST LIBRARY</title>
 
     <!-- for multiple fonts change | to %7c * no spaces*  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
