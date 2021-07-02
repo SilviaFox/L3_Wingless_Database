@@ -1,7 +1,7 @@
 <?php
 
     // Get variables
-    $entry_ID=$_SESSION['Quote_Success'];
+    $entry_ID=$_SESSION['Entry Success'];
 
     // Find items
     $find_sql = "SELECT * FROM `item_details` WHERE `ID` = $entry_ID";

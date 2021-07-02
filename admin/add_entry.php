@@ -6,13 +6,23 @@
         $faction_ID = $_SESSION['Add_Entry'];
         echo "FactionID: ".$faction_ID;
 
+        if ($faction_ID=="unknown")
+        {
+            $faction_name = "";
+            $faction_description = "";
+
+            $fname_error = $fdescription_error = "no-error";
+            $fname_field = $fdescription_field = "form-ok";
+
+
+        }
+
         $all_types_sql = "SELECT * FROM `type` ORDER BY `Type` ASC ";
         $all_types_query = mysqli_query($dbconnect, $all_types_sql);
         $all_types_rs = mysqli_fetch_assoc($all_types_query);
 
-        $name = "Please type the item name here";
-        $description = "Please type description here";
-        $type = "";
+        $name = "";
+        $description = "";
 
         $type_ID = 0;
 
@@ -21,7 +31,7 @@
         $name_error = $type_error = "no-error";
         $name_field = "form-ok";
 
-        $description_error = $type_error = "no-error";
+        $description_error = "no-error";
         $description_field = "form-ok";
 
         $type_field = "type-ok";
@@ -75,14 +85,40 @@
     action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]."?page=../admin/add_entry");?>"
     enctype="multipart/form-data">
 
+        <?php
+        if ($faction_ID=="unknown")
+        {
+            ?>
+            <div class="<?php echo $fname_error ?>">
+            This field can't be blank    
+            </div>
+
+            <input class="add-field <?php echo $fname_field ?>" name="faction_name" value="<?php echo $faction_name ?>" placeholder="Faction Name"></input>
+            <br/>
+            
+            <div class="<?php echo $fdescription_error ?>">
+            This field can't be blank
+            </div>
+
+            <textarea class="add-field <?php echo $fdescription_field ?>" name="fdescription" placeholder="Faction Description" value="<?php echo $fdescription ?>" rows="5"></textarea> 
+            <br/><br />
+
+            <?php
+        }
+        ?>
+
         <div class="<?php echo $name_error ?>">
             This field can't be blank    
         </div>
 
-        <input class="add-field <?php echo $name_field ?>" name="name" placeholder="Name"></input>
-        <br/><br />
+        <input class="add-field <?php echo $name_field ?>" name="name" value="<?php echo $name ?>" placeholder="Name"></input>
 
-        <textarea class="add-field <?php echo $description_field ?>" name="description" placeholder="Description" rows="5"></textarea> 
+        <div class="<?php echo $description_error ?>">
+            This field can't be blank
+        </div>
+
+        <textarea class="add-field <?php echo $description_field ?>" name="description" placeholder="Description" value="<?php echo $description ?>" rows="5"></textarea> 
+        <br/><br/>
 
         <select class="add-field <?php echo $type_field ?>" name="type">            
             <?php
@@ -100,7 +136,7 @@
                 
        
         </select>
-
+        
         <p>
             <input type="submit" value="Submit"/>
         </p>

@@ -1,3 +1,3 @@
 <div class="box footer">
-    CC Samuel K 2020
+    CC Sam K 2021
 </div> <!-- / footer -->
